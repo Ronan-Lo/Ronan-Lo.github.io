@@ -11,7 +11,7 @@ pub_date:       "2025"
 
 abstract: >-
   PyTorch and TensorFlow are two widely adopted, modern deep learning frameworks that offer comprehensive computational libraries for developing deep learning models. In this study, we illustrate how to leverage these computational platforms to estimate a class of widely used psychometric models—dichotomous and polytomous Item Response Theory (IRT) models—along with their multidimensional extensions. Simulation studies demonstrate that the parameter estimates exhibit low mean squared error and bias. An empirical case study further illustrates how these two frameworks compare with other popular software packages in applied settings. We conclude by discussing the potential of integrating modern deep learning tools and perspectives into psychometric research.
-# cover:          /assets/images/covers/cover3.jpg
+cover:          /assets/images/pub/2025/dl-irt-cover.png
 authors:
   - Nanyu Luo
   - Yuting Han
