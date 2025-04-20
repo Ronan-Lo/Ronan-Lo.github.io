@@ -50,7 +50,8 @@ education:
 experience:
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/cuhk.png
-  position: "Research Assistant, Advisor: *Dr. Jinbo He*"
+  position: >
+    Research Assistant, Advisor: *Dr. Jinbo He*
   date: May. 2022 - present
 - name: Shenzhen Research Institute of Big Data
   logo: /assets/images/badges/SRIBD.png
