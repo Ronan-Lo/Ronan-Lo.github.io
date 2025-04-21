@@ -21,10 +21,10 @@ cv_link: /assets/cv (Nanyu).pdf
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    Nanyu Luo is a PhD student in the Department of Applied Psychology and Human Development at the University of Toronto, where he works under the supervision of <a href="https://www.feng-ji.org/home" target="_blank">Dr. Feng Ji</a> in the <a href="https://www.feng-ji.org/lab-members" target="_blank">Psychometrics and Responsible AI Lab</a>.
+    I'm a PhD student in the Department of Applied Psychology and Human Development at the University of Toronto. I work under the supervision of <a href="https://www.feng-ji.org/home" target="_blank">Dr. Feng Ji</a> in the <a href="https://www.feng-ji.org/lab-members" target="_blank">Psychometrics and Responsible AI Lab</a>.
   </p>
   <p>
-    His research harnesses advances in machine learning, statistical inference, and quantitative methodology to tackle pressing questions in psychological and educational measurement, with a particular emphasis on the convergence of psychometrics and artificial intelligence.
+    My research harnesses advances in machine learning, statistics, and quantitative methodology to tackle pressing questions in psychological and educational measurement, with a particular emphasis on the convergence of psychometrics and artificial intelligence.
   </p>
 
 portrait_url: /assets/images/photos/me.jpg
@@ -40,11 +40,11 @@ education:
   date: Sep. 2024 - present
 - name: University of Oxford
   logo: /assets/images/badges/ox.png
-  position: MSc. in Statistical Science
+  position: MSc. in Statistical Science, Distinction
   date: Oct. 2023 - Sep. 2024
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/cuhk.png
-  position: BSc. in Applied Mathematics
+  position: BSc. in Applied Mathematics, First Class
   date: Sep. 2019 - May 2023
 
 experience:

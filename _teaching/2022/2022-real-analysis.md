@@ -9,7 +9,7 @@ term:           Fall 2022
 description: >-
   This course covers foundational topics in analysis, including metric space theory, function sequences and series, Lebesgue integration, and existence and uniqueness theorems for differential equations.
 cover:          /assets/images/teaching/MIRAcover.png
-cover_description: "Awesome textbook!"
+cover_description: "Interesting textbook!"
 
 links:
   Textbook: https://measure.axler.net/
