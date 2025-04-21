@@ -5,11 +5,16 @@
             <li data-target="#{{ include.id | slugify }}" data-slide-to="{{ forloop.index0 }}" {% if forloop.index == 1 %}class="active"{% endif %}></li>
             {% endfor %}
         </ol>
-        <div class="carousel-inner" style="height: {{ include.height }};">
+        <div class="carousel-inner">
             {% for item in include.images %}
             <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
                 {% if item.link %}<a href="{{ item.link }}" target="_blank">{% endif %}
-                <div class="lazy always-load d-block rounded-sm" data-src="{{ item.src | relative_url }}" style="height: {{ include.height }};">
+                <img
+                    class="lazy always-load d-block w-100 rounded-sm"
+                    data-src="{{ item.src | relative_url }}"
+                    alt="{{ item.title }}"
+                    style="height: auto;"
+                >
                 </div>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ item.title }}</h5>
