@@ -6,6 +6,7 @@ height: 440px
 images:
 - src: assets/images/trip/cover.JPG
   title: My journey
+  desc: Some photos by me.
 - src: assets/images/trip/oxford.JPG
   title: Oxford
   desc: In a sweet, lovely town, I savored a leisurely time of learning.
