@@ -7,5 +7,5 @@ pages:
   url: /publications
 - name: Teaching
   url: /teaching
-# - name: Showcase
-#   url: /showcase
+- name: Showcase
+  url: /showcase
