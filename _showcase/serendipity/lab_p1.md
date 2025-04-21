@@ -2,7 +2,7 @@
 show: true
 width: 4
 date: 2025-01-10 00:01:00 +0800
-group: Appreciate all erendipity
+group: Appreciate all serendipity 🍀🍀🍀
 ---
 
 <!-- 内联拍立得风格 CSS -->
