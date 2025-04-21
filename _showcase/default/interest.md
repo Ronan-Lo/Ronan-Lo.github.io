@@ -1,6 +1,6 @@
 ---
 show: true
-width: 4
+width: 6
 date: 2099-12-20 00:01:00 +0000
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

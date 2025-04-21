@@ -1,6 +1,6 @@
 ---
 show: true
-width: 4
+width: 6
 date: 2099-12-31 00:01:00 +0000
 ---
 
