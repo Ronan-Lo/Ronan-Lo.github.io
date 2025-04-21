@@ -1,7 +1,7 @@
 ---
 show: true
 width: 4
-date: "{{ now | date: '%s'    | minus: 3600    | date: '%Y-%m-%d %H:%M:%S %z' }}"
+date: 2099-12-30 00:01:00 +0000
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
@@ -44,8 +44,8 @@ date: "{{ now | date: '%s'    | minus: 3600    | date: '%Y-%m-%d %H:%M:%S %z' }}
     .Tea { background-color: #B8E5FA; }
     .Painting { background-color: #38B6E9; }
     .Photography { background-color: #1D91C2; }
-
 </style>
+
 <div class="p-4 text-center">
     <h6>Hobbies</h6>
     <div class="badges-container">
