@@ -2,7 +2,7 @@
 show: true
 width: 8
 date: 2099-12-25 00:01:00 +0000
-# height: 295px
+height: 590px
 images:
 - src: assets/images/trip/cover.JPG
   title: My journey
