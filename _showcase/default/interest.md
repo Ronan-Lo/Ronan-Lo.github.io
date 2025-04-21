@@ -41,7 +41,7 @@ date: 2099-12-30 00:01:00 +0000
     
     .Travelling { background-color: #205EA7; }
     .Cookery { background-color: #38B6C4; }
-    .Tea { background-color: #B8E5FA; }
+    .Tea { background-color: #38B6F4; }
     .Painting { background-color: #38B6E9; }
     .Photography { background-color: #1D91C2; }
 </style>
@@ -49,10 +49,10 @@ date: 2099-12-30 00:01:00 +0000
 <div class="p-4 text-center">
     <h6>Hobbies</h6>
     <div class="badges-container">
-        <div class="badge Travelling"><i class="fa-solid fa-globe"></i> Travelling</div>
-        <div class="badge Cookery"> <i class="fa-solid fa-cutlery"></i> Cookery</div>
-        <div class="badge Tea"> <i class="fa-solid fa-coffee"></i> Tea</div>
-        <div class="badge Painting"><i class="fa-solid fa-paint-brush"></i> Painting</div>
-        <div class="badge Photography"><i class="fa-solid fa-camera-retro"></i> Photography</div>
+        <div class="badge Travelling"><i class="fa-solid fa-globe"></i> &nbsp;Travelling</div>
+        <div class="badge Cookery"> <i class="fa-solid fa-cutlery"></i> &nbsp;Cookery</div>
+        <div class="badge Tea"> <i class="fa-solid fa-coffee"></i> &nbsp;Tea</div>
+        <div class="badge Painting"><i class="fa-solid fa-paint-brush"></i> &nbsp;Painting</div>
+        <div class="badge Photography"><i class="fa-solid fa-camera-retro"></i> &nbsp;Photography</div>
     </div>
 </div>
