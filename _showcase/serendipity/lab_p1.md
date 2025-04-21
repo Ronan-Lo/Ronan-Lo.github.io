@@ -1,6 +1,6 @@
 ---
-show: show
-width: 3
+show: true
+width: 4
 date: 2025-01-10 00:01:00 +0800
 group: Appreciate all erendipity
 ---
