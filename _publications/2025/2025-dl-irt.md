@@ -3,7 +3,7 @@ title:          "Fitting Item Response Theory Models Using Deep Learning Computa
 date:           2025-04-18 00:01:00 +0000
 show:           true
 selected:       true
-pub:            "JEBS"
+pub:            "JEBS "
 pub_pre:        "Submitted to "
 pub_post:       'Under review.'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'

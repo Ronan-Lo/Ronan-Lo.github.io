@@ -3,7 +3,7 @@ title:          "Federated Item Response Models: A Gradient-driven Privacy-prese
 date:           2025-11-30 00:01:00 +0000
 show:           true
 selected:       true
-pub:            "Psychometrika"
+pub:            "Psychometrika "
 pub_pre:        "Submitted to "
 pub_post:       'Under review.'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
@@ -19,8 +19,8 @@ abstract: >-
 cover:          /assets/images/pub/2025/fedirt.png
 cover_description: "Gemini generated"
 authors:
-  - Biying Zhou
-  - Nanyu Luo
+  - Biying Zhou*
+  - Nanyu Luo*
   - Feng Ji#
 links:
   Paper: https://arxiv.org/abs/2506.21744
