@@ -4,12 +4,12 @@ navbar_name: "Nanyu Luo"
 
 positions:
 - logo: /assets/images/badges/uoft.png  # Logo is optional
-  name: PhD student
+  name: PhD Student, University of Toronto
 
 
 email: "n.luo@mail.utoronto.ca"
 cv_link: /assets/cv (Nanyu).pdf
-# gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
+gscholar: "https://scholar.google.ca/citations?user=RTjPTXoAAAAJ&hl=en"
 # github: your_github_id
 # twitter: your_twitter_id  # Do not include the '@' symbol
 # wechat_qrcode: /assets/images/etc/wechat.jpg
@@ -59,6 +59,8 @@ experience:
   date: Jun. 2021 - Aug. 2022
 
 awards:
+- name: Doctoral Student Fellowship from the Data Sciences Institute (2026-2029)
+  date: 2026
 - name: Connaught International Scholarship for Doctoral Students (2025-2029)
   date: 2024
 - name: Schwartz Reisman Institute for Technology and Society 2025-26 Graduate Fellow

@@ -39,3 +39,11 @@ collections:
   - teaching
   - news
   - showcase
+
+exclude:
+  - demos
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - vendor

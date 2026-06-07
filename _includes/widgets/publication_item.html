@@ -1,63 +1,37 @@
 {% assign item = include.item %}
-<div class="d-none d-md-block">
-    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
-            {%- if item.cover -%}
-            <img 
-                data-src="{{ item.cover | relative_url }}" 
-                alt="{{ item.title }}" 
-                class="lazy w-100 rounded-sm" 
-                {%- if item.cover_description -%}
-                    data-toggle="tooltip" 
-                    data-placement="top" 
-                    title="{{ item.cover_description }}"
-                {%- endif -%}
-                src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
-            {%- else -%}
-            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
-            {%- endif -%}
-        </div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-            <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
-            <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                {% for link in item.links %}
-                {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                {% endif %}
-                {% endfor %}
-            </p>
-
-        </div>
+{%- if item.pub_date and item.pub_date != "" -%}{%- assign year = item.pub_date -%}{%- else -%}{%- assign year = item.date | date: "%Y" -%}{%- endif -%}
+<article class="pub reveal" data-theme="{{ item.theme }}" data-venue="{{ item.venue_short }}" data-type="{{ item.type }}" data-year="{{ year }}" data-role="{{ item.role }}">
+    <div class="pub-cover">
+        {%- if item.cover -%}
+        <img src="{{ item.cover | relative_url }}" alt="{{ item.title }}"{% if item.cover_description %} title="{{ item.cover_description }}"{% endif %}>
+        {%- else -%}
+        <div class="ph">❀</div>
+        {%- endif -%}
     </div>
-</div>
-
-<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.cover %}lazy{% endif %}" data-src="{{ item.cover | relative_url }}">
-    <div class="w-100" style="background-color: rgba(255,255,255,0.95);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
-                <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    {% for link in item.links %}
-                    {% if link[1].url %}
-                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                    {% else %}
-                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                    {% endif %}
-                    {% endfor %}
-                </p>
-            </div>
+    <div class="pub-main">
+        <h3 class="pub-title">{% if item.links.Paper %}<a href="{{ item.links.Paper }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+        <p class="pub-authors">{% include widgets/author_list.html authors=item.authors %}</p>
+        <p class="pub-venue"><span><em>{{ item.pub }}</em>{% if item.status == 'Under review' or item.status == 'Under revision' %} <span class="venue-note">({{ item.status | downcase }})</span>{% endif %} · {{ year }}</span></p>
+        {% if item.abstract %}<p class="pub-abs">{{ item.abstract }}</p>{% endif %}
+        <div class="tags">
+            {% if item.role == 'first' %}<span class="tag tag-role-1">★ First author</span>
+            {% elsif item.role == 'co' %}<span class="tag tag-role-co">✦ Co-first author</span>{% endif %}
+            {% if item.type %}<span class="tag {% if item.type == 'Journal' %}tag-type-j{% elsif item.type == 'Conference' %}tag-type-c{% else %}tag-type-pre{% endif %}">{{ item.type }}</span>{% endif %}
+            {% if item.status == 'Published' or item.status == 'Accepted' %}<span class="tag tag-status-pub">{{ item.status }}</span>{% endif %}
+            {% for t in item.tags %}<span class="tag tag-theme">{{ t }}</span>{% endfor %}
         </div>
+        {% if item.links %}
+        <div class="pub-links">
+            {% for link in item.links %}
+            {%- assign icon = 'fa-link' -%}
+            {%- if link[0] == 'Paper' -%}{%- assign icon = 'fa-file-lines' -%}
+            {%- elsif link[0] == 'Code' -%}{%- assign icon = 'fa-code' -%}
+            {%- elsif link[0] == 'Demo' -%}{%- assign icon = 'fa-play' -%}
+            {%- elsif link[0] == 'Slides' -%}{%- assign icon = 'fa-file-powerpoint' -%}{%- endif -%}
+            {% if link[1].url %}<a target="{{ link[1]['target'] | default: '_blank' }}" rel="noopener" href="{{ link[1]['url'] }}"><i class="fas {{ icon }}"></i> {{ link[0] }}</a>
+            {% else %}<a target="_blank" rel="noopener" href="{{ link[1] }}"><i class="fas {{ icon }}"></i> {{ link[0] }}</a>{% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
-
-</div>
+</article>

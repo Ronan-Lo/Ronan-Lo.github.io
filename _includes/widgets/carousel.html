@@ -1,31 +1,23 @@
-<div>
-    <div id="{{ include.id | slugify }}" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+{%- assign cid = include.id | slugify -%}
+<div class="sc-carousel" id="{{ cid }}" data-carousel style="--ch: {{ include.height | default: '340px' }};">
+    <div class="sc-stage">
+        {% for item in include.images %}
+        <figure class="sc-slide{% if forloop.first %} is-active{% endif %}">
+            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{% endif %}
+            <img class="sc-photo" src="{{ item.src | relative_url | replace: ' ', '%20' }}" alt="{{ item.title }}" loading="lazy">
+            {% if item.link %}</a>{% endif %}
+            <figcaption class="sc-cap">
+                <span class="sc-cap-title">{{ item.title }}</span>
+                {% if item.desc %}<span class="sc-cap-desc">{{ item.desc }}</span>{% endif %}
+            </figcaption>
+        </figure>
+        {% endfor %}
+        <button class="sc-arrow prev" data-prev type="button" aria-label="Previous">&#8249;</button>
+        <button class="sc-arrow next" data-next type="button" aria-label="Next">&#8250;</button>
+        <div class="sc-dots">
             {% for item in include.images %}
-            <li data-target="#{{ include.id | slugify }}" data-slide-to="{{ forloop.index0 }}" {% if forloop.index == 1 %}class="active"{% endif %}></li>
+            <button class="sc-dot{% if forloop.first %} is-active{% endif %}" data-dot="{{ forloop.index0 }}" type="button" aria-label="Go to slide {{ forloop.index }}"></button>
             {% endfor %}
-        </ol>
-        <div class="carousel-inner" style="height: {{ include.height }};">
-            {% for item in include.images %}
-            <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
-                {% if item.link %}<a href="{{ item.link }}" target="_blank">{% endif %}
-                <div class="lazy always-load d-block rounded-sm" data-src="{{ item.src | relative_url }}" style="height: {{ include.height }};">
-                </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ item.title }}</h5>
-                    <p>{{ item.desc }}</p>
-                </div>
-                {% if item.link %}</a>{% endif %}
-            </div>
-            {% endfor %}
-        </div>
-        <div class="carousel-control-prev" type="button" data-target="#{{ include.id | slugify }}" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </div>
-        <div class="carousel-control-next" type="button" data-target="#{{ include.id | slugify }}" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
         </div>
     </div>
 </div>

@@ -1,13 +1,11 @@
 ---
 layout: default
-title : Homepage
+title : Home
 navbar_title: Home
 ---
-{% include widgets/profile_card.html %}
-
-{% include widgets/debug_repo_name.html %}
-
-{% include widgets/debug_url.html %}
+<section class="section" style="margin-top: 1.4rem;">
+    {% include widgets/profile_card.html %}
+</section>
 
 {% if site.data.display.homepage.show_experience %}
     {% include widgets/experience_card.html %}
@@ -21,10 +19,16 @@ navbar_title: Home
 {% endif %}
 
 {% if site.data.display.homepage.show_selected_publications %}
-    {% assign pubs = site.publications | where: "show", true | sort: "date" | reverse | where: "selected", true %}
-    {% 
-        include widgets/publication_card.html 
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-    %}
+{% assign pubs = site.publications | where: "show", true | where: "selected", true | sort: "date" | reverse %}
+{% if pubs.size > 0 %}
+<section class="section reveal">
+    <div class="section-head">
+        <h2 class="brush-title brush-blush">Selected Publications</h2>
+        <a class="more" href="{{ '/publications' | relative_url }}">View all <i class="fas fa-angle-right"></i></a>
+    </div>
+    {% for item in pubs limit: 3 %}
+        {% include widgets/publication_item.html item=item %}
+    {% endfor %}
+</section>
+{% endif %}
 {% endif %}
