@@ -156,6 +156,7 @@ a:hover { color: var(--pollen); background-size: 100% 2px; }
 .info-block h6 { font-family: var(--font-ui); font-size: .76rem; letter-spacing: .18em; text-transform: uppercase; color: var(--turq-deep); margin: 0 0 .8rem; }
 .tl-item { display: flex; gap: .7rem; margin-bottom: .9rem; }
 .tl-item img { width: 22px; height: 22px; object-fit: contain; margin-top: .2rem; flex: 0 0 22px; }
+.tl-item .tl-logo-gap { flex: 0 0 22px; }
 .tl-item .t-name { font-weight: 500; color: var(--night); font-family: var(--font-display); }
 .tl-item .t-sub { font-size: .92rem; color: var(--ink-soft); }
 .tl-item .t-date { font-family: var(--font-ui); font-size: .8rem; color: var(--ink-soft); }

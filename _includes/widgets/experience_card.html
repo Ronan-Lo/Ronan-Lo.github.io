@@ -7,7 +7,7 @@
                 <h6>Education</h6>
                 {% for item in site.data.profile.education %}
                 <div class="tl-item">
-                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% endif %}
+                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% else %}<span class="tl-logo-gap"></span>{% endif %}
                     <div>
                         <div class="t-name">{{ item.name }}</div>
                         <div class="t-sub">{{ item.position }}</div>
@@ -23,7 +23,7 @@
                 <h6>Experience</h6>
                 {% for item in site.data.profile.experience %}
                 <div class="tl-item">
-                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% endif %}
+                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% else %}<span class="tl-logo-gap"></span>{% endif %}
                     <div>
                         <div class="t-name">{{ item.name }}</div>
                         <div class="t-sub">{{ item.position }}</div>

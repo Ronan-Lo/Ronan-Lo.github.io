@@ -48,11 +48,17 @@ education:
   date: Sep. 2019 - May 2023
 
 experience:
+- name: ETS Research Institute
+  logo: /assets/images/badges/ets.png
+  position: >-
+    Ida Lawrence Research Intern <br/>
+    Mentors: <i>Dr. Michael Fauss</i> and <i>Dr. Xiang Liu</i>
+  date: Jun. 2026 - Nov. 2026
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/cuhk.png
   position: >
     Research Assistant, Advisor: <i>Dr. Jinbo He</i>
-  date: May. 2022 - present
+  date: May. 2022 - Aug. 2024
 - name: Shenzhen Research Institute of Big Data
   logo: /assets/images/badges/SRIBD.png
   position: Research Assistant
@@ -61,7 +67,7 @@ experience:
 awards:
 - name: Doctoral Student Fellowship from the Data Sciences Institute (2026-2029)
   date: 2026
-- name: Connaught International Scholarship for Doctoral Students (2025-2029)
+- name: Connaught International Scholarship for Doctoral Students (2024-2028)
   date: 2024
 - name: Schwartz Reisman Institute for Technology and Society 2025-26 Graduate Fellow
   date: 2025

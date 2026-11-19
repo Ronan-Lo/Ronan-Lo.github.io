@@ -5,9 +5,9 @@ show:           true
 selected:       true
 pub:            "Journal of Eating Disorders"
 venue_short:    "J. Eating Disorders"
-pub_date:       "2025"
+pub_date:       "2026"
 type:           "Journal"
-status:         "Accepted"
+status:         "Published"
 role:           "co"
 theme:          "Applied ML in Psychology"
 tags:           ["Applied ML", "Deep Learning", "NLP"]
@@ -22,5 +22,6 @@ authors:
   - Feng Ji#
   - Jinbo He
 links:
-  Paper: https://www.researchsquare.com/article/rs-7852043/v1
+  Paper: https://doi.org/10.1186/s40337-026-01675-x
+  Preprint: https://www.researchsquare.com/article/rs-7852043/v1
 ---
